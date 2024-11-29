@@ -1,6 +1,7 @@
 ﻿@model List<Slider>
 @{
     ViewData["Title"] = "Index";
+    int TableNo = 1;
 }
 <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -23,10 +24,10 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td>@item.Id</td>
+                        <td>@(TableNo++)</td>
                         <td>
-                            <img src="~/imgs/sliders/@item.ImageUrl " width"50" />
-                             
+                            <img src="~/imgs/sliders/@item.ImageUrl " width="50" />
+
                         </td>
                         <td>@item.Title </td>
                         <td>@item.Subtitle </td>
@@ -37,9 +38,21 @@
                         <td>
                             <a class="btn btn-danger" asp-action="Delete" asp-controller="Slider" asp-route-id="@item.Id">Delete</a>
                         </td>
-                        <td>
-                            <a class="btn btn-warning" asp-action="Hide" asp-controller="Slider" asp-route-id="@item.Id">Hide</a>
+                        <td>   
+                            @if (item.IsDeleted == false)
+                            {
+                                <a class="btn btn-warning" asp-action="Hide" asp-controller="Slider" asp-route-id="@item.Id">Hide</a>
+                            }
+
+                            @if(item.IsDeleted ==true )
+                            {
+                                <a class="btn btn-secondary" asp-action="Show" asp-controller="Slider" asp-route-id="@item.Id">Show</a>
+                                
+                            }
+                            
+                            
                         </td>
+                        
                     </tr>
 
 

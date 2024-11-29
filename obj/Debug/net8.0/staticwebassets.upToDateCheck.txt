@@ -2081,6 +2081,9 @@ wwwroot\assets\js\vendor\modernizr-3.11.2.min.js
 wwwroot\assets\js\waypoints.min.js
 wwwroot\assets\style.css
 wwwroot\imgs\sliders\csn1pfg2.gmj.png
+wwwroot\imgs\sliders\dhdoztlm.m2e.png
+wwwroot\imgs\sliders\ggbqphxr.kwe.png
 wwwroot\imgs\sliders\hg3nuqyq.vyx.png
 wwwroot\imgs\sliders\ic45gvw4.zud.avif
 wwwroot\imgs\sliders\ig3wzhzg.otc.png
+wwwroot\imgs\sliders\w2ae2uvv.cf3.png

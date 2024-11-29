@@ -56,6 +56,7 @@ namespace Uniqlo2.Areas.Admin.Controllers
             if (!id.HasValue) return BadRequest();
             if(await _context.Sliders.AnyAsync(x => x.Id == id))
             {
+                
                 _context.Sliders.Remove(new Slider { Id = id.Value });
                 await _context.SaveChangesAsync();
             }
@@ -67,6 +68,7 @@ namespace Uniqlo2.Areas.Admin.Controllers
         {   if (!id.HasValue) return BadRequest();
             var data= await _context.Sliders.FindAsync(id.Value);
             if (data  is null) return NotFound();
+
             var viewModel = new SliderCreateVM
             {
                 Title = data.Title,
@@ -118,5 +120,34 @@ namespace Uniqlo2.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
 
         }
+        
+        public async Task<IActionResult> Hide(int? id)
+        {
+            if (!id.HasValue) return BadRequest();
+             var data= await _context.Sliders.FindAsync(id.Value);
+            if (id is null) return NotFound();
+            
+
+             data.IsDeleted = true;
+             await _context.SaveChangesAsync();
+            
+            return RedirectToAction(nameof(Index));
+            
+        }
+        public async Task<IActionResult> Show(int? id)
+        {
+            if (!id.HasValue) return BadRequest();
+            var data = await _context.Sliders.FindAsync(id.Value);
+            if (id is null) return NotFound();
+
+
+            data.IsDeleted = false;
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+
+        }
+
+
     }
 }

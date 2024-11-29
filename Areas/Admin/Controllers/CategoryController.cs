@@ -20,6 +20,7 @@ namespace Uniqlo2.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create( Category data)
         {
+            if (!ModelState.IsValid) return View();
             await _context.Categories.AddAsync(data);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

@@ -8329,6 +8329,26 @@
       "PackagePath": "staticwebassets\\assets\\style.css"
     },
     {
+      "Id": "C:\\Users\\Asus\\source\\repos\\Uniqlo2\\Uniqlo2\\wwwroot\\imgs\\products\\1iyfl2dk.lpa.webp",
+      "PackagePath": "staticwebassets\\imgs\\products\\1iyfl2dk.lpa.webp"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\Uniqlo2\\Uniqlo2\\wwwroot\\imgs\\products\\3cazc131.ojt.png",
+      "PackagePath": "staticwebassets\\imgs\\products\\3cazc131.ojt.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\Uniqlo2\\Uniqlo2\\wwwroot\\imgs\\products\\cn31td1z.zqr.png",
+      "PackagePath": "staticwebassets\\imgs\\products\\cn31td1z.zqr.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\Uniqlo2\\Uniqlo2\\wwwroot\\imgs\\products\\y0ehyktr.gyg.png",
+      "PackagePath": "staticwebassets\\imgs\\products\\y0ehyktr.gyg.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\Uniqlo2\\Uniqlo2\\wwwroot\\imgs\\sliders\\aclj2rdq.cyp.jpg",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\aclj2rdq.cyp.jpg"
+    },
+    {
       "Id": "C:\\Users\\Asus\\source\\repos\\Uniqlo2\\Uniqlo2\\wwwroot\\imgs\\sliders\\csn1pfg2.gmj.png",
       "PackagePath": "staticwebassets\\imgs\\sliders\\csn1pfg2.gmj.png"
     },
@@ -8337,8 +8357,16 @@
       "PackagePath": "staticwebassets\\imgs\\sliders\\dhdoztlm.m2e.png"
     },
     {
+      "Id": "C:\\Users\\Asus\\source\\repos\\Uniqlo2\\Uniqlo2\\wwwroot\\imgs\\sliders\\exvcczd3.ovx.jpg",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\exvcczd3.ovx.jpg"
+    },
+    {
       "Id": "C:\\Users\\Asus\\source\\repos\\Uniqlo2\\Uniqlo2\\wwwroot\\imgs\\sliders\\ggbqphxr.kwe.png",
       "PackagePath": "staticwebassets\\imgs\\sliders\\ggbqphxr.kwe.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\Uniqlo2\\Uniqlo2\\wwwroot\\imgs\\sliders\\gyrwgyed.bov.jpeg",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\gyrwgyed.bov.jpeg"
     },
     {
       "Id": "C:\\Users\\Asus\\source\\repos\\Uniqlo2\\Uniqlo2\\wwwroot\\imgs\\sliders\\hg3nuqyq.vyx.png",
@@ -8353,8 +8381,16 @@
       "PackagePath": "staticwebassets\\imgs\\sliders\\ig3wzhzg.otc.png"
     },
     {
+      "Id": "C:\\Users\\Asus\\source\\repos\\Uniqlo2\\Uniqlo2\\wwwroot\\imgs\\sliders\\qg234dmy.qui.jpg",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\qg234dmy.qui.jpg"
+    },
+    {
       "Id": "C:\\Users\\Asus\\source\\repos\\Uniqlo2\\Uniqlo2\\wwwroot\\imgs\\sliders\\w2ae2uvv.cf3.png",
       "PackagePath": "staticwebassets\\imgs\\sliders\\w2ae2uvv.cf3.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\Uniqlo2\\Uniqlo2\\wwwroot\\imgs\\sliders\\zirbamhh.grs.png",
+      "PackagePath": "staticwebassets\\imgs\\sliders\\zirbamhh.grs.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Uniqlo2.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

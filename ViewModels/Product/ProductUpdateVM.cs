@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Uniqlo2.ViewModels.Common;
 
 namespace Uniqlo2.ViewModels.Product
 {
@@ -17,11 +18,11 @@ namespace Uniqlo2.ViewModels.Product
         public int Quantity { get; set; }
 
         public int Discount { get; set; }
-        public IFormFile CoverFile { get; set; }
-        public IEnumerable<string> OtherFileUrls { get; set; }
+        public IFormFile? CoverFile { get; set; }
+        public IEnumerable<ImageUrlAndId>? OtherFileUrls { get; set; }
         public IEnumerable<IFormFile>? OtherFiles { get; set; }
         public int? CategoryId { get; set; }
-        public string CoverFileUrl { get; set; } = null!;
+        public string? CoverFileUrl { get; set; }
 
 
     }

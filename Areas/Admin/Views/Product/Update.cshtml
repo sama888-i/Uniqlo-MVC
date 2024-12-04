@@ -23,19 +23,22 @@
 
             <div class="form-group ">
                 <div>
-                    <img width="80px" src="~/imgs/products/ /@Model.CoverFileUrl "/>
+                    <img width="80px" src="~/imgs/products/@Model.CoverFileUrl "/>
                 </div>
                 <label asp-for="CoverFile"></label>
                 <input accept="image/*" asp-for="CoverFile" class="form-control">
                 <span asp-validation-for="CoverFile" class="text-small text-danger "></span>
             </div>
             <div class="form-group ">
+                <div class="d-flex gap-1">
+                    <span>Silmək üçün->Şəkilə toxun</span>
                 @foreach (var item in Model.OtherFileUrls ??[])
                 {
-                    <div>
-                        <img width="80px" src="~/imgs/products/@item " />
-                    </div>
+                    
+                    <img class="prod-imgs" item-id="@item.Id" width="80px" src="~/imgs/products/@item.Url " />
+                    
                 }
+                </div> 
                     <label asp-for="OtherFiles"></label>
                     <input accept="image/*" asp-for="OtherFiles" class="form-control" multiple>
                     <span asp-validation-for="OtherFiles" class="text-small text-danger "></span>
@@ -78,6 +81,45 @@
         </form>
     </div>
 </div>
+@section script{
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+    <script>
+        $(".prod-imgs").click(function()=>{
+            let img=$(this;
+            let id=$(this).attr("item-id");
+                    Swal.fire({
+          title: "Sekli silmek isteyirsizmi?",
+          text: "Silsez geri qaytarmaqq olmuyacaq!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "He,sil!"
+          cancelButtonText:"Fikrimi deyisdim ,qalsin!"
+        }).then((result) => {
+          if (result.isConfirmed) { fetch('/Admin/Product/DeleteImage/'+id)
+                  .then(res=>{
+                      if(res){
+                             Swal.fire({
+                             title: "Deleted!",
+                             text: "Your file has been deleted.",
+                             icon: "success"
+                             });
+                          img.remove();
+                      }
+                  });
+         
+          }
+        });
 
+           
+            
+
+        });
+    </script>
+}
+@section style{
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css">
+}
 
 

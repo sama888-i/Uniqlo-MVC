@@ -2082,8 +2082,16 @@ wwwroot\assets\js\waypoints.min.js
 wwwroot\assets\style.css
 wwwroot\imgs\products\1iyfl2dk.lpa.webp
 wwwroot\imgs\products\3cazc131.ojt.png
+wwwroot\imgs\products\az03bsjo.s1u.png
+wwwroot\imgs\products\baew4xu2.gtb.png
 wwwroot\imgs\products\cn31td1z.zqr.png
+wwwroot\imgs\products\cvcsqzs4.okr.png
+wwwroot\imgs\products\irgtj1bf.buy.png
+wwwroot\imgs\products\qkxayk3i.zyx.png
+wwwroot\imgs\products\pgpc1r2a.i4k.png
+wwwroot\imgs\products\ujfp1zp4.xbl.png
 wwwroot\imgs\products\y0ehyktr.gyg.png
+wwwroot\imgs\products\zsrehj2a.jdu.png
 wwwroot\imgs\sliders\aclj2rdq.cyp.jpg
 wwwroot\imgs\sliders\csn1pfg2.gmj.png
 wwwroot\imgs\sliders\dhdoztlm.m2e.png

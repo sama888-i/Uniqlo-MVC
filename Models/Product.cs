@@ -12,6 +12,9 @@
         public int? CategoryId { get; set; }
         public Category? Category { get; set; }
         public ICollection<ProductImage>? Images { get; set; }
+        public ICollection<ProductRating>? Ratings { get; set; }
+        public ICollection<ProductComment>? Comments { get; set; }
+        public ICollection<Tag> Tags { get; set; }
 
 
     }

@@ -2273,9 +2273,6 @@ select.select-color {
 .pot-small-img a {
     display: block;
 }
-.pot-small-img a img {
-    width: 100%;
-}
 .pot-small-img {
     margin-top: 10px;
 }

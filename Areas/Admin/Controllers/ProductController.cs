@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Uniqlo2.DataAccsess;
 using Uniqlo2.Extensions;
+using Uniqlo2.Helpers;
 using Uniqlo2.Models;
 using Uniqlo2.ViewModels.Common;
 using Uniqlo2.ViewModels.Product;
@@ -9,6 +11,7 @@ using Uniqlo2.ViewModels.Product;
 namespace Uniqlo2.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles =RoleConstants.Product )]
     public class ProductController(UniqloDbContext _context, IWebHostEnvironment _env) : Controller
     {
         public async Task<IActionResult> Index()
@@ -110,6 +113,7 @@ namespace Uniqlo2.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(ProductUpdateVM vm, int? id)
         {
+            vm.OtherFiles.Select(x => x.Length / 1024).Sum();
             if (!id.HasValue) return BadRequest();
             var data = await _context.Products.FindAsync(id.Value);
             if (data is null) return NotFound();
@@ -121,7 +125,6 @@ namespace Uniqlo2.Areas.Admin.Controllers
                     ModelState.AddModelError("CoverFile", "File length must be less than 800kb");
                 data.CoverImage = await vm.CoverFile!.UploadAsync(_env.WebRootPath, "imgs", "products");
             }
-            vm.OtherFiles.Select(x => x.Length / 1024).Sum();
             if (vm.OtherFiles != null && vm.OtherFiles.Any())
             {
                 if (!vm.OtherFiles.All(x => x.IsValidType("image")))
@@ -150,6 +153,7 @@ namespace Uniqlo2.Areas.Admin.Controllers
                 list.Add(new ProductImage
                 {
                     FileUrl = fileName,
+                    product = data
                     
                 });
             }  

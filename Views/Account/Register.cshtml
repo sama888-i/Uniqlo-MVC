@@ -42,45 +42,43 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form class="user">
-                                <div class="form-group" method="post">                                    
+                            <form class="user" method="post">
+                                <div class="form-group">                                    
                                         <label asp-for="Fullname"></label>
-                                        <input asp-for="Fullname" class="form-control form-control-user"/>
+                                        <input asp-for="Fullname" class="form-control form-control-user">
                                         <span class="text-danger" asp-validation-for="Fullname"></span>                                                                       
                                 </div>
                                  <div class="form-group">                                    
                                         <label asp-for="Username"></label>
-                                        <input asp-for="Username" class="form-control form-control-user"/>
+                                        <input asp-for="Username" class="form-control form-control-user">
                                         <span class="text-danger" asp-validation-for="Username"></span>
                                 </div>   
                                  <div class="form-group">                                    
                                         <label asp-for="Email"></label>
-                                        <input asp-for="Email" class="form-control form-control-user"/>
+                                        <input asp-for="Email" class="form-control form-control-user">
                                         <span class ="text-danger" asp-validation-for="Email"></span>
                                 </div>   
                                  <div class="form-group">                                    
                                         <label asp-for="Password"></label>
-                                        <input asp-for="Password" class="form-control form-control-user"/>
+                                        <input asp-for="Password" class="form-control form-control-user">
                                         <span class="text-danger" asp-validation-for="Password"></span>
                                 </div>   
                                  <div class="form-group">                                    
                                         <label asp-for="RePassword"></label>
-                                        <input asp-for="RePassword" class="form-control form-control-user"/>
+                                        <input asp-for="RePassword" class="form-control form-control-user">
                                         <span class="text-danger" asp-validation-for="RePassword"></span>
                                 </div>   
-                                <div asp-asp-validation-summary="ModelOnly" class=" text-danger">
+                                <div asp-validation-summary="ModelOnly" class=" text-danger">
                                 </div> 
                                 <button class="btn btn-primary btn-user btn-block">
                                     Register Account
                                 </button> 
-                                <hr>                               
+                                                              
                             </form>
                             <hr>
+                           
                             <div class="text-center">
-                                <a class="small" href="forgot-password.html">Forgot Password?</a>
-                            </div>
-                            <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+                                <a class="small" asp-action="Login">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>
